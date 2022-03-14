@@ -1,0 +1,79 @@
+:root {
+  --lightGray: #d5e1ef;
+  --grey: #7d889e;
+  --darkNavy: #1f314f;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-color: var(--lightGray);
+  font-family: "Outfit", sans-serif;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+article {
+  background-color: #fff;
+  inline-size: min(85%, 20em);
+  margin-inline: auto;
+  text-align: center;
+  padding: 1em;
+  border-radius: 1.25em;
+}
+
+h1 {
+  font-size: 1.375em;
+  color: var(--darkNavy);
+  line-height: 1.272727;
+}
+
+p {
+  font-size: 0.9375em;
+  color: var(--grey);
+  line-height: 1.266666;
+  letter-spacing: 0.0125em;
+  max-inline-size: 27ch;
+  margin-inline: auto;
+}
+
+img {
+  border-radius: 0.625em;
+}
+
+img + * {
+  margin-block-start: 2rem;
+}
+
+h1 + * {
+  margin-block: 1rem;
+}
