@@ -76,5 +76,5 @@ img + * {
 }
 
 h1 + * {
-  margin-block: 1rem;
+  margin-block: 1rem 2rem;
 }
