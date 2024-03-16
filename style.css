@@ -1,0 +1,106 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  Add accessible line-height
+  Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayih-blue: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+  --color-grey: hsl(220, 15%, 55%);
+  --font-family: 'Outfit', sans-serif;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: var(--horizontal-alignment, flex-start);
+}
+
+.stack > * + * {
+  margin-block-start: var(--margin-block-start);
+}
+
+.box {
+  padding: var(--padding);
+  border-width: var(--border-width);
+  border-style: var(--border-style);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
+.center {
+  box-sizing: content-box;
+  max-inline-size: var(--max-inline-size);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  font-family: var(--font-family);
+  text-align: center;
+  --horizontal-alignment: center;
+  --background-color: var(--color-light-gray);
+}
+
+main {
+  --background-color: var(--color-white);
+  --padding: 1rem;
+  --border-radius: 1.25rem;
+  --max-inline-size: calc(320px - var(--padding));
+  --margin-block-start: 1.5rem;
+}
+
+h1 {
+  font-size: 1.375rem;
+  line-height: 1.1;
+  color: var(--color-dark-blue);
+}
+
+p {
+  font-size: 0.9375rem;
+  color: var(--color-grey);
+  --margin-block-start: 1rem;
+  max-inline-size: 25ch;
+}
